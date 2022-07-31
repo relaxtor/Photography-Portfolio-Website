@@ -1,0 +1,99 @@
+.header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    background: linear-gradient(to bottom, $bg-3-Color, $bg-1-Color);
+    overflow: hidden;
+
+    .header__container {
+        display: grid;
+        grid-template-columns: 43% 53%;
+        grid-gap: 4%;
+        margin-top: 5rem;
+        position: relative;
+
+        .header__left {
+
+            &:hover .header__left-image-lg {
+                top: 0;
+                left: 0;
+                filter: saturate(1) brightness(1);
+                border: 1.6rem solid $bg-4-Color;
+            }
+
+            &:hover .header__left-image-sm {
+                opacity: 0;
+            }
+
+            .header__left-image-bg {
+                position: absolute;
+                height: 34rem;
+                width: 26rem;
+                background-color: $bg-4-Color;
+            }
+
+            .header__left-image-lg {
+                position: relative;
+                top: 1.6rem;
+                left: 1.6rem;
+                width: 46rem;
+                filter: saturate(0) brightness(.3);
+            }
+
+            .header__left-image-sm {
+                width: 44rem;
+                height: 44rem;
+                position: absolute;
+                top: 9.6rem;
+                left: 9.6rem;
+                overflow: hidden;
+
+                .left__image-sm {
+                    height: fit-content;
+                }
+            }
+        }
+
+        .header__right {
+
+            .header__head {
+                display: flex;
+                align-items: flex-start;
+
+                .empty {
+                    height: 5.6rem;
+                    width: 28.8rem;
+                    margin-right: 3.2rem;
+                    margin-bottom: 5.6rem;
+                    background-color: $bg-2-Color;
+                    border-radius: calc(5.6rem / 2);
+                    box-shadow: $boxShadowEmpty;
+                    border: $borderEmpty;
+                }
+
+                .header__tag {
+                    font-size: 1.6rem;
+                    color: $primaryColorVariant;
+                }
+            }
+
+            .header__right-text {
+                width: 85%;
+                margin-top: 3.2rem;
+                font-size: 1.6rem;
+                text-align: justify;
+            }
+
+            // Only show on tablet and phone
+            .header__right-link {
+                display: none;
+            }
+        }
+    }
+}
+
+// Media quries
+@media screen and (max-width: 1023.99px) {}
+@media screen and (max-width: 767.99px) {}
+@media screen and (max-width: 424.99px) {}

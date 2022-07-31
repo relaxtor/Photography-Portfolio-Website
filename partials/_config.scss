@@ -11,6 +11,8 @@ $bg-3-Color: rgb(1, 39, 52);
 $bg-4-Color: rgb(0, 51, 71);
 $lightColor: rgb(133, 162, 178);
 $whiteColor: rgb(230, 230, 230);
+$rgbaColor: rgba(255, 255, 255, .4);
+$rgbaColorBlack: rgba(0, 0, 0, .4);
 
 // Color's variable - PURPLE THEME
 /*$primaryColor: #ff7b02;
@@ -28,6 +30,14 @@ $containerWidth-MD: 92%;
 
 // Transition
 $transition: all .4s ease;
+
+// Border
+$border: .32rem solid $bg-3-Color;
+$borderEmpty: .1rem solid $bg-4-Color;
+
+// Box-shadow
+$boxShadow: 0 1rem 1rem $rgbaColor;
+$boxShadowEmpty: inset 0 1rem 1rem $rgbaColorBlack;
 
 // Font family
 $fontFamilyMontserrat: 'Montserrat', sans-serif;
@@ -110,4 +120,21 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+// Media quries
+@media screen and (max-width: 1023.99px) {}
+@media screen and (max-width: 767.99px) {
+    html {
+        font-size: 52.5%;
+    }
+
+    .container {
+        width: $containerWidth-MD;
+    }
+}
+@media screen and (max-width: 424.99px) {
+    html {
+        font-size: 50%;
+    }
 }
